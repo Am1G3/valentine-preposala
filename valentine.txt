@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Valentine Proposal</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ text-align: center;
+ margin: 100px;
+ }
+
+ button {
+ font-size: 16px;
+ padding: 10px 20px;
+ margin: 10px;
+ cursor: pointer;
+ }
+
+ #reaction {
+ font-size: 20px;
+ margin-top: 20px;
+ }
+
+ #photo {
+ max-width: 100%;
+ height: auto;
+ margin-top: 20px;
+ }
+ </style>
+</head>
+<body>
+
+ <h1>Will you be my Valentine, Ajsa?</h1>
+
+ <!-- Display initial photo -->
+ <img id="photo" src="path/to/initial/photo.jpg" alt="Ajsa's Photo">
+
+ <button onclick="respond('yes')">Yes</button>
+ <button onclick="respond('no')">No</button>
+
+ <p id="reaction"></p>
+
+ <script>
+ function respond(answer) {
+ var reactionElement = document.getElementById('reaction');
+ var photoElement = document.getElementById('photo');
+
+ if (answer === 'yes') {
+ reactionElement.textContent = 'That\'s wonderful! 💖 Ajsa said yes!';
+ // Display a different photo for the positive response
+ photoElement.src = 'path/to/yes/photo.jpg';
+ } else {
+ reactionElement.textContent = 'Oh no! 😢 Ajsa said no. Don\'t worry, you\'ll find your Valentine!';
+ }
+ }
+ </script>
+
+</body>
+</html>
